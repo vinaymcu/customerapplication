@@ -1,0 +1,93 @@
+openapi: '3.0.2'
+info:
+  title: Customer Service
+  version: '1.0.0'
+servers:
+  - url: https://api.server.test/v1
+paths:
+  /customer/api/v1/save:
+    post:
+      summary : save customer
+      operationId: post event
+      tags:
+        - save customer
+      parameters:
+        - name: Accept
+          in: header
+          description: Accept 
+          required: true
+          schema:
+            type: string
+            default: application/json
+        - name: Content Type
+          in: header
+          description: Content Type 
+          required: true
+          schema:
+            type: string
+            default: application/json        
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema: 
+               $ref: "#/components/schemas/CustomerRes"
+
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CustomerReq"
+components:
+  schemas:
+
+    CustomerReq:
+      type: object
+      properties:
+        id:
+          type: string
+        first_name:
+          type: string
+        last_name:
+          type: string
+        email:
+          type: string
+        gender:
+          type: string
+        dob :
+          type: string    
+        
+
+    CustomerRes:
+      type: object
+      properties:
+        userMessages: 
+          type: array
+          items:
+            type: string
+          example: ["str1", "str2", "str3"]  
+        serviceErrors:
+          type: array
+          items:
+            type: string
+          example: ["str1", "str2", "str3"]  
+        payload:
+          $ref: "#/components/schemas/Payload"
+
+    Payload:
+     type: object
+     properties:
+       id:
+         type: string
+       first_name:
+          type: string
+       last_name:
+          type: string
+       email:
+          type: string
+       gender:
+          type: string
+       dob :
+          type: string    
+
