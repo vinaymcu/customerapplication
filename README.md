@@ -1,5 +1,6 @@
 # Customer Application
 
+
 # The Application provide the details related to create customer,get customer,update customer,delete customer
 # This application developed using spring boot with java
 # Database used as mysql database and script is at sql folder
