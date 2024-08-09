@@ -11,3 +11,10 @@
 <br><br> The customer_apis.sh file have shell script for test rest end point
   <br>   Location:  customerapplication\customer_apis.sh
 <br><br> The pom.xml contains information about the project and configuration details used by Maven to build the project. 
+
+
+Financial Utilization(%)	YTD	QTD	MTD	WTD
+Billable	67.5	112.5	112.5	112.5
+Chargeable	76.6	112.5	112.5	112.5
+India Cost Recovery	76.6	112.5	112.5	112.5
+Productive	78.2	119.2	112.5	112.5
